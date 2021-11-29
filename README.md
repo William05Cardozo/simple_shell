@@ -20,9 +20,8 @@ General
 * Use system calls only when you need to
 
 
+### Authorized functions and macros
 
-
-### Function Authorized
 - **``access``** (man 2 access)
 - **``chdir``** (man 2 chdir)
 - **``close``** (man 2 close)
@@ -54,6 +53,38 @@ General
 - **``wait4``** (man 2 wait4)
 - **``write``** (man 2 write)
 
+## Compilation
+
+**``gcc -Wall -Werror -Wextra -pedantic *.c -o hsh``**
+
+### Testing
+
+Your shell should work like this in interactive mode:
+
+```sh
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
+
+But also in non-interactive mode:
+
+```sh
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+```
 
 ### More Info
 
@@ -69,10 +100,9 @@ General
 | [](./) |	       |
 
 
+# Authors
 
-### Author
-***
 *Holberton School Student*
 
-* William Cardozo - [Github](https://github.com/William05Cardozo) - [Twitter](https://twitter.com/W_anCardozo)
-* Juan Sebastian Posada  - [Github](https://github.com/Juansepo13) - [Twiter](https://twitter.com/@JuanSeb35904130)
+* ** William Cardozo - [Github](https://github.com/William05Cardozo) - [Twitter](https://twitter.com/W_anCardozo)**
+* ** Juan Sebastian Posada  - [Github](https://github.com/Juansepo13) - [Twiter](https://twitter.com/@JuanSeb35904130)**
