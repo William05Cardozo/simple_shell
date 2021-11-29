@@ -40,5 +40,6 @@
 ### Author
 ***
 *Holberton School Student*
-William Cardozo - [Github](https://github.com/William05Cardozo) - [Twitter](https://twitter.com/W_anCardozo)
-Juan Sebastian Posada  - [Github](https://github.com/Juansepo13) - [Twiter](https://twitter.com/@JuanSeb35904130)
+
+* William Cardozo - [Github](https://github.com/William05Cardozo) - [Twitter](https://twitter.com/W_anCardozo)
+* Juan Sebastian Posada  - [Github](https://github.com/Juansepo13) - [Twiter](https://twitter.com/@JuanSeb35904130)
