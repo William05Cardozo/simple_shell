@@ -37,7 +37,7 @@ void mypath(list_t *list, char **environment)
 int catpath(list_t *list, char **environment)
 {
 	int i, status;
-	char **tokensEnv;
+	char **tokenEnv;
 	char *concat1, *concat2, *duplicate;
 	pid_t child;
 
@@ -48,12 +48,12 @@ int catpath(list_t *list, char **environment)
 	}
 
 	duplicate = _strdup(environment[i]);
-	tokensEnv = tokenizer(duplicate, ":=");
+	tokenEnv = tokenizer(duplicate, ":=");
 
 	i = 0;
-	while (tokensEnv[i] != NULL)
+	while (tokenEnv[i] != NULL)
 	{
-		concat1 = _strcat(tokensEnv[i], "/"); /*   /usr/bin/   */
+		concat1 = _strcat(tokenEnv[i], "/"); /*   /usr/bin/   */
 		concat2 = _strcat(concat1, list->array[0]); /*   /usr/bin/ls   */
 
 		if (access(concat2, F_OK) == 0)
