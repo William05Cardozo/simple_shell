@@ -9,32 +9,32 @@
 
 char **tokenizer(char *buffer, char *dlimiter)
 {
-	char **tokens = NULL;
+	char **tokns = NULL;
 	size_t i = 0;
-	unsigned int mcount = 1;
+	unsigned int mSize = 1;
 
 	if (buffer == NULL)
 	{
 		return (NULL);
 	}
 
-	tokens = malloc(sizeof(char *) * mcount);
+	tokns = malloc(sizeof(char *) * mSize);
 
 	if ((*buffer == '\n' || *buffer == ' ') && *(buffer + 1) == '\0')
 	{
 		return (NULL);
 	}
 
-	while ((tokens[i] = _strtok(buffer, dlimiter)) != NULL)
+	while ((tokns[i] = _strtok(buffer, dlimiter)) != NULL)
 	{
 		i++;
-		if (i > mcount)
+		if (i > mSize)
 		{
-			tokens = realloc(tokens, sizeof(char *) * (i + 1));
-			if (tokens == NULL)
+			tokns = realloc(tokns, sizeof(char *) * (i + 1));
+			if (tokns == NULL)
 				return (NULL);
 		}
 		buffer = NULL;
 	}
-	return (tokens);
+	return (tokns);
 }
