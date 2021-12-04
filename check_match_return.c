@@ -21,7 +21,7 @@ void check_match_return(char (*f)(list_t *r), list_t *list, char **environment)
 	{
 		if ((access(list->array[0], F_OK)) != -1)
 		{
-			checkpath(list, environment);
+			mypath(list, environment);
 			if (isatty(STDIN_FILENO))
 				_puts(prmpt);
 		}

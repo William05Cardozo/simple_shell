@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * checkpath - check if the access to environment is open
+ * mypath - check if the access to environment is open
  * @list: struct list
  * @environment: environment variable
  * Return: Success void
  */
 
-void checkpath(list_t *list, char **environment)
+void mypath(list_t *list, char **environment)
 {
 	pid_t child;
 	int status;
