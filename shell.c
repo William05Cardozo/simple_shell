@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * main - main function that contains the loop of program
  * @argc: number of arguments passed to function
@@ -34,7 +35,7 @@ int main(__attribute__((unused)) int argc,
 	if (isatty(STDIN_FILENO))
 		_putchar('\n');
 
-	_freeenv(environment);
+	_freeEnv(environment);
 
 	return (0);
 }

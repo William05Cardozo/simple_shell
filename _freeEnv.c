@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _freeenv - function that free the environment variable
+ * _freeEnv - function that free the environment variable
  * @environment: variable to bring the environment path
  * Return: Success void
  */
-void _freeenv(char **environment)
+void _freeEnv(char **environment)
 {
 	int i;
 
