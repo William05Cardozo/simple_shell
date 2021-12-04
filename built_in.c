@@ -11,7 +11,7 @@ char (*built(list_t *m))(list_t *m)
 	int i;
 
 	built_t op[] = {
-		{"exit", esc},
+		{"exit", escape},
 		{NULL, NULL}};
 
 	for (i = 0; op[i].f != NULL; i++)
@@ -25,12 +25,12 @@ char (*built(list_t *m))(list_t *m)
 }
 
 /**
- * esc - built-in function that kill the program
+ * escape - built-in function that kill the program
  * @list: struct list
  * Return: Success
  */
 
-char esc(__attribute__((unused)) list_t *list)
+char escape(__attribute__((unused)) list_t *list)
 {
 	free(list->buffer);
 	free(list->array);
