@@ -28,7 +28,7 @@ int main(__attribute__((unused)) int argc,
 		else
 		{
 			f = built(&list);
-			check_match_return(f, &list, environment);
+			built_in_return(f, &list, environment);
 		}
 	}
 	if (isatty(STDIN_FILENO))

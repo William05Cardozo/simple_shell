@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * check_match_return - check return
+ * build_in_return - check return
  * @f: function pointer
  * @list: pointer list
  * @environment: environment variable
  * Return: Success void
  */
 
-void check_match_return(char (*f)(list_t *r), list_t *list, char **environment)
+void built_in_return(char (*f)(list_t *r), list_t *list, char **environment)
 {
 	char *prmpt = "♪ ";
 
@@ -29,7 +29,7 @@ void check_match_return(char (*f)(list_t *r), list_t *list, char **environment)
 		{
 			if (isatty(STDIN_FILENO))
 			{
-				_puts(list->buffer);
+			_puts(list->buffer);
 				_puts(": command not found\n");
 			}
 		}
