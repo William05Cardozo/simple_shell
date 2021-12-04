@@ -3,33 +3,33 @@
 /**
  * check_match_return - check return
  * @f: function pointer
- * @vars: pointer vars
+ * @list: pointer list
  * @environment: environment variable
  * Return: Success void
  */
 
-void check_match_return(char (*f)(vars_t *r), vars_t *vars, char **environment)
+void check_match_return(char (*f)(list_t *r), list_t *list, char **environment)
 {
 	char *prmpt = "♪ ";
 
 	if (f != NULL)
 	{
-		f(vars);
+		f(list);
 	}
 
 	else if (f == NULL)
 	{
-		if ((access(vars->array[0], F_OK)) != -1)
+		if ((access(list->array[0], F_OK)) != -1)
 		{
-			checkpath(vars, environment);
+			checkpath(list, environment);
 			if (isatty(STDIN_FILENO))
 				_puts(prmpt);
 		}
-		if (concatpath(vars, environment) == 0)
+		if (concatpath(list, environment) == 0)
 		{
 			if (isatty(STDIN_FILENO))
 			{
-				_puts(vars->buffer);
+				_puts(list->buffer);
 				_puts(": command not found\n");
 			}
 		}

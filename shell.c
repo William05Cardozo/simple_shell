@@ -9,17 +9,17 @@
 int main(__attribute__((unused)) int argc,
 	 __attribute__((unused)) char **argv, char **environment)
 {
-	vars_t vars = {NULL};
+	list_t list = {NULL};
 	char *prmpt = "♪ ";
 	char *dlimiter = " \n";
 	size_t dashSize = 0;
-	char (*f)(vars_t *);
+	char (*f)(list_t *);
 
 	_puts(prmpt);
-	while ((getline(&vars.buffer, &dashSize, stdin)) != -1)
+	while ((getline(&list.buffer, &dashSize, stdin)) != -1)
 	{
-		vars.array = tokenizer(vars.buffer, dlimiter);
-		if (vars.array == NULL)
+		list.array = tokenizer(list.buffer, dlimiter);
+		if (list.array == NULL)
 		{
 			if (isatty(STDIN_FILENO))
 				_puts(prmpt);
@@ -27,8 +27,8 @@ int main(__attribute__((unused)) int argc,
 		}
 		else
 		{
-			f = match(&vars);
-			check_match_return(f, &vars, environment);
+			f = built(&list);
+			check_match_return(f, &list, environment);
 		}
 	}
 	if (isatty(STDIN_FILENO))

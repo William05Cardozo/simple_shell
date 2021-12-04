@@ -2,15 +2,15 @@
 
 /**
  * match - execute the match of input and built-in functions
- * @m: var type struct
+ * @m: list type struct
  * Return: Success
  */
 
-char (*match(vars_t *m))(vars_t *m)
+char (*built(list_t *m))(list_t *m)
 {
 	int i;
 
-	match_t op[] = {
+	built_t op[] = {
 		{"exit", esc},
 		{NULL, NULL}};
 
@@ -26,13 +26,13 @@ char (*match(vars_t *m))(vars_t *m)
 
 /**
  * esc - built-in function that kill the program
- * @vars: struct var
+ * @list: struct list
  * Return: Success
  */
 
-char esc(__attribute__((unused)) vars_t *vars)
+char esc(__attribute__((unused)) list_t *list)
 {
-	free(vars->buffer);
-	free(vars->array);
+	free(list->buffer);
+	free(list->array);
 	exit(98);
 }

@@ -14,28 +14,28 @@
 #include <fcntl.h>
 
 /**
- * struct vars - this struct contains ths storage of input data
+ * struct list - this struct contains ths storage of input data
  *@buffer: storage at first time the command received
  *@array: contains the commands after of execute tokenizer function
  */
 
-typedef struct vars
+typedef struct list
 {
 	char *buffer;
 	char **array;
-} vars_t;
+} list_t;
 
 /**
- * struct matcher - contains the match of the input and the built-in functions
+ * struct built - contains the match of the input and the built-in functions
  *@string: string for compare with the built-in / env functions
  *@f: pointer to functions
  */
 
-typedef struct matcher
+typedef struct built
 {
 	char *string;
-	char (*f)(vars_t *);
-} match_t;
+	char (*f)(list_t *);
+} built_t;
 
 int _strlen(char *str);
 int _puts(char *str);
@@ -47,12 +47,12 @@ int _strncmp(char *str, char *str2, int num);
 char **tokenizer(char *buffer, char *delimiter);
 char *_strtok(char *buffer, const char *delimiter);
 
-void checkpath(vars_t *vars, char **environment);
-int concatpath(vars_t *vars, char **environment);
-void check_match_return(char (*f)(vars_t *r), vars_t *vars, char **environment);
+void checkpath(list_t *list, char **environment);
+int concatpath(list_t *list, char **environment);
+void check_match_return(char (*f)(list_t *r), list_t *list, char **environment);
 
-char (*match(vars_t *m))(vars_t *m);
-char esc(vars_t *vars);
+char (*built(list_t *m))(list_t *m);
+char esc(list_t *list);
 void _freeenv(char **environment);
 
 #endif
