@@ -3,14 +3,12 @@
 /**
  * _strtok - cut the strings according to the delimiter
  * @buffer: storage the commands received of the input
- * @delimiter: the character for cut the strings
+ * @dlimiter: the character for cut the strings
  * Return: Success str
  */
 
-/* my own strtok */
-char *_strtok(char *buffer, const char *delimiter)
+char *_strtok(char *buffer, const char *dlimiter)
 {
-	/* save the reference out of function */
 	static char *ref;
 	char *str = NULL;
 	char *set = NULL;
@@ -29,7 +27,7 @@ char *_strtok(char *buffer, const char *delimiter)
 		{
 			str = set;
 
-			while ((*set != *delimiter && *set != *(delimiter + 1)) && *set != '\0')
+			while ((*set != *dlimiter && *set != *(dlimiter + 1)) && *set != '\0')
 			{
 				set++;
 			}

@@ -3,11 +3,11 @@
 /**
  * tokenizer - manage the data received of the input and assign memory
  * @buffer: storage the commands received of the input
- * @delimiter: the character for cut the strings
+ * @dlimiter: the character for cut the strings
  * Return: Success tokens
  */
 
-char **tokenizer(char *buffer, char *delimiter)
+char **tokenizer(char *buffer, char *dlimiter)
 {
 	char **tokens = NULL;
 	size_t i = 0;
@@ -25,7 +25,7 @@ char **tokenizer(char *buffer, char *delimiter)
 		return (NULL);
 	}
 
-	while ((tokens[i] = _strtok(buffer, delimiter)) != NULL)
+	while ((tokens[i] = _strtok(buffer, dlimiter)) != NULL)
 	{
 		i++;
 		if (i > mcount)

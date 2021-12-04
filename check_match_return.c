@@ -10,7 +10,7 @@
 
 void check_match_return(char (*f)(vars_t *r), vars_t *vars, char **environment)
 {
-	char *prompt = "($) ";
+	char *prmpt = "♪ ";
 
 	if (f != NULL)
 	{
@@ -23,7 +23,7 @@ void check_match_return(char (*f)(vars_t *r), vars_t *vars, char **environment)
 		{
 			checkpath(vars, environment);
 			if (isatty(STDIN_FILENO))
-				_puts(prompt);
+				_puts(prmpt);
 		}
 		if (concatpath(vars, environment) == 0)
 		{
@@ -36,5 +36,5 @@ void check_match_return(char (*f)(vars_t *r), vars_t *vars, char **environment)
 	}
 
 	if (isatty(STDIN_FILENO))
-		_puts(prompt);
+		_puts(prmpt);
 }

@@ -10,19 +10,19 @@ int main(__attribute__((unused)) int argc,
 	 __attribute__((unused)) char **argv, char **environment)
 {
 	vars_t vars = {NULL};
-	char *prompt = "($) ";
-	char *delimiter = " \n";
-	size_t lineSize = 0;
+	char *prmpt = "♪ ";
+	char *dlimiter = " \n";
+	size_t dashSize = 0;
 	char (*f)(vars_t *);
 
-	_puts(prompt);
-	while ((getline(&vars.buffer, &lineSize, stdin)) != -1)
+	_puts(prmpt);
+	while ((getline(&vars.buffer, &dashSize, stdin)) != -1)
 	{
-		vars.array = tokenizer(vars.buffer, delimiter);
+		vars.array = tokenizer(vars.buffer, dlimiter);
 		if (vars.array == NULL)
 		{
 			if (isatty(STDIN_FILENO))
-				_puts(prompt);
+				_puts(prmpt);
 			continue;
 		}
 		else
