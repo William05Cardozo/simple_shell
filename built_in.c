@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * match - execute the match of input and built-in functions
+ * built - execute the match of input and built-in functions
  * @m: list type struct
  * Return: Success
  */

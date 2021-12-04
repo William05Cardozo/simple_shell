@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * build_in_return - check return
+ * built_in_return - check return
  * @f: function pointer
  * @list: pointer list
  * @environment: environment variable
