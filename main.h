@@ -48,7 +48,7 @@ char **tokenizer(char *buffer, char *delimiter);
 char *_strtok(char *buffer, const char *delimiter);
 
 void mypath(list_t *list, char **environment);
-int concatpath(list_t *list, char **environment);
+int catpath(list_t *list, char **environment);
 void check_match_return(char (*f)(list_t *r), list_t *list, char **environment);
 
 char (*built(list_t *m))(list_t *m);

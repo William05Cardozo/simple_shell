@@ -28,13 +28,13 @@ void mypath(list_t *list, char **environment)
 }
 
 /**
- * concatpath - joining and concatenating a final path environment
+ * catpath - joining and concatenating a final path environment
  * @list: struct list
  * @environment: environment variable
  * Return: Success 0 Always
  */
 
-int concatpath(list_t *list, char **environment)
+int catpath(list_t *list, char **environment)
 {
 	int i, status;
 	char **tokensEnv;

@@ -25,7 +25,7 @@ void check_match_return(char (*f)(list_t *r), list_t *list, char **environment)
 			if (isatty(STDIN_FILENO))
 				_puts(prmpt);
 		}
-		if (concatpath(list, environment) == 0)
+		if (catpath(list, environment) == 0)
 		{
 			if (isatty(STDIN_FILENO))
 			{
