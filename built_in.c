@@ -12,12 +12,13 @@ char (*built(list_t *m))(list_t *m)
 
 	built_t op[] = {
 		{"exit", escape},
+		/*{"env", _env},*/
 		{NULL, NULL}
 	};
 
 	for (i = 0; op[i].f != NULL; i++)
 	{
-		if (strcmp(op[i].string, m->array[0]) == 0)
+		if (_strcmp(op[i].string, m->array[0]) == 0)
 		{
 			break;
 		}
@@ -37,3 +38,23 @@ char escape(__attribute__((unused)) list_t *list)
 	free(list->array);
 	exit(98);
 }
+
+
+/**
+ * _env - function
+ * @list: Linked list
+ * i: iterator
+ * Return: No line
+ 
+
+char _env(__attribute__((unused)) list_t *list)
+{
+	unsigned int i;
+
+	for (i = 0; list->env[i]; i++)
+	{
+		_puts(list->env[i]);
+		_puts("\n");
+	}
+	return (0);
+} */
