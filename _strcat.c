@@ -12,7 +12,7 @@ char *_strcat(char *str1, char *str2)
 {
 	int i = 0;
 	int j = 0;
-	char = *cat;
+	char  *cat;
 
 	cat = malloc(sizeof(char) * ((_strlen(str1)) + (_strlen(str2))) + 1);
 
