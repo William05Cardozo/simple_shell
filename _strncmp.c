@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strncmp - compare the string and the length
- * @str1: first string to compare
- * @str2: second string to compare
- * @num: lenght of string to compare
- * Return: Success
+ * _strncmp - compare two string with length
+ * @str1: string to compare
+ * @str2: string to compare
+ * @num: comparative string rank
+ * Return: Result
  */
 
 int _strncmp(char *str1, char *str2, int num)
