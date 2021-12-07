@@ -13,8 +13,8 @@
 #include <fcntl.h>
 
 /**
-* struct list - Stores input parameters
-*@buffer: saves the first input parameters 
+*struct list - Stores input parameters
+*@buffer: saves the first input parameters
 *@array: contains the commands after of execute tokenizer function
 */
 

@@ -71,10 +71,7 @@ int catpath(list_t *list, char **environment)
 				default:
 					wait(&status);
 					break;
-			}
-			return (1);
-		}
-		i++;
-	}
-	return (0);
+			} return (1);
+		} i++;
+	} return (0);
 }
