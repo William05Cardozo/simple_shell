@@ -12,7 +12,7 @@ int main(__attribute__((unused)) int argc,
 	 __attribute__((unused)) char **argv, char **environment)
 {
 	list_t list = {NULL};
-	char *prmpt = "♪ ";
+	char *prmpt = "$ ";
 	char *dlimiter = " \n";
 	size_t dashSize = 0;
 	char (*f)(list_t *);

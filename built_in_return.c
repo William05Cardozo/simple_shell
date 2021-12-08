@@ -10,7 +10,7 @@
 
 void built_in_return(char (*f)(list_t *r), list_t *list, char **environment)
 {
-	char *prmpt = "♪ ";
+	char *prmpt = "$ ";
 
 	if (f != NULL)
 	{
