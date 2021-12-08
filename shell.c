@@ -36,7 +36,5 @@ int main(__attribute__((unused)) int argc,
 	if (isatty(STDIN_FILENO))
 		_putchar('\n');
 
-	_freeEnv(environment);
-
 	return (0);
 }
