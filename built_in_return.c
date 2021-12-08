@@ -10,8 +10,6 @@
 
 void built_in_return(char (*f)(list_t *r), list_t *list, char **environment)
 {
-	char *prmpt = "$ ";
-
 	if (f != NULL)
 	{
 		f(list);
@@ -22,8 +20,6 @@ void built_in_return(char (*f)(list_t *r), list_t *list, char **environment)
 		{
 			mypath(list, environment);
 
-			if (isatty(STDIN_FILENO))
-				_puts(prmpt);
 		}
 
 		else if (catpath(list, environment) == 0)
@@ -35,6 +31,4 @@ void built_in_return(char (*f)(list_t *r), list_t *list, char **environment)
 			}
 		}
 	}
-	if (isatty(STDIN_FILENO))
-		_puts(prmpt);
 }
