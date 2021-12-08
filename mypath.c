@@ -17,7 +17,7 @@ void mypath(list_t *list, char **environment)
 	{
 		case 0:
 			execve(list->array[0], list->array, environment);
-			break;
+			exit(98);
 		case -1:
 			perror("Error to create a child proccess");
 			break;
@@ -64,7 +64,7 @@ int catpath(list_t *list, char **environment)
 			{
 				case 0:
 					execve(concat2, list->array, environment);
-					break;
+					exit(98);
 				case -1:
 					perror("Error to create a child proccess");
 					break;

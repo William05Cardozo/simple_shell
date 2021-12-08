@@ -35,5 +35,5 @@ char escape(__attribute__((unused)) list_t *list)
 {
 	free(list->buffer);
 	free(list->array);
-	return (0);
+	exit(98);
 }
