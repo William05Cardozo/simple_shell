@@ -33,7 +33,6 @@ char (*built(list_t *m))(list_t *m)
 
 char escape(__attribute__((unused)) list_t *list)
 {
-	free(list->buffer);
 	free(list->array);
 	exit(98);
 }
