@@ -25,6 +25,8 @@ int main(__attribute__((unused)) int argc,
 
 	while ((getline(&list.buffer, &dashSize, stdin)) != -1)
 	{
+		while (*list.buffer == ' ')
+			list.buffer++;
 		list.array = tokenizer(list.buffer, dlimiter);
 		if (list.array == NULL)
 		{

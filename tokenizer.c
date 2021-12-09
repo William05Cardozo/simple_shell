@@ -21,7 +21,7 @@ char **tokenizer(char *buffer, char *dlimiter)
 
 	tokns = malloc(sizeof(char *) * mSize);
 
-	if ((*buffer == '\n' || *buffer == ' ') && *(buffer + 1) == '\0')
+	if ((*buffer == '\n' || *buffer == ' ')   && *(buffer + 1) == '\0')
 	{
 		return (NULL);
 	}
