@@ -35,8 +35,16 @@ char *_strtok(char *buffer, const char *dlimiter)
 				*set = '\0';
 				set++;
 			}
+			while (*set == ' ' && *(set + 1) != '\0')
+			{
+				set++;
+			}
 			ref = set;
+			if (*str == '\0')
+				return (NULL);
+			return (str);
 		}
 	}
+	str = NULL;
 	return (str);
 }
