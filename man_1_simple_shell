@@ -1,5 +1,5 @@
 .\" Man page for 0x16. C - Simple Shell
-.TH man 1 "dia dic 2021" "Version 1.0" "Simple Shell Manpage"
+.TH man 1 "dic 2021" "Version 1.0" "Simple Shell Manpage"
 .SH NAME
 .B Simple UNIX Command Interpreter.
 
