@@ -49,6 +49,8 @@ int catpath(list_t *list, char **environment);
 void built_in_return(char (*f)(list_t *r), list_t *list, char **environment);
 char (*built(list_t *m))(list_t *m);
 char escape(list_t *list);
+int _strcmp(char *s1, char *s2);
+/*char _env(list_t *list);*/
 void _freeEnv(char **environment);
 
 #endif

@@ -17,7 +17,7 @@ char (*built(list_t *m))(list_t *m)
 
 	for (i = 0; op[i].f != NULL; i++)
 	{
-		if (strcmp(op[i].string, m->array[0]) == 0)
+		if (_strcmp(op[i].string, m->array[0]) == 0)
 		{
 			break;
 		}
@@ -33,7 +33,6 @@ char (*built(list_t *m))(list_t *m)
 
 char escape(__attribute__((unused)) list_t *list)
 {
-	free(list->buffer);
 	free(list->array);
 	exit(98);
 }
